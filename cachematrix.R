@@ -28,9 +28,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Returns the inverse of matrix wrapped in the received object, computing it if
-## not already in cache. The ... arguments are passed to the `solve` function,
-## which is used to compute the inverse.
+## Returns the inverse of the matrix that is wrapped inside the received object
+## (this object should be the result of `makeCacheMatrix`). If not already in
+## cache, the inverse is computed. The ... arguments are passed to the `solve`
+## function, which is used to compute the inverse.
 
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
